@@ -1,0 +1,204 @@
+{
+  "recipes": [
+    {
+      "name": "Healing Potion",
+      "ingredients": {
+        "r": 2,
+        "g": 0,
+        "b": 0
+      }
+    },
+    {
+      "name": "Laquer",
+      "ingredients": {
+        "r": 0,
+        "g": 0,
+        "b": 2
+      }
+    },
+    {
+      "name": "Paint",
+      "ingredients": {
+        "r": 0,
+        "g": 2,
+        "b": 0
+      }
+    },
+    {
+      "name": "Healing Potion II",
+      "ingredients": {
+        "r": 4,
+        "g": 0,
+        "b": 0
+      }
+    },
+    {
+      "name": "Healing Potion III",
+      "ingredients": {
+        "r": 5,
+        "g": 0,
+        "b": 0
+      }
+    },
+    {
+      "name": "Damage Potion",
+      "ingredients": {
+        "r": 1,
+        "g": 1,
+        "b": 0
+      }
+    },
+    {
+      "name": "Damage Potion II",
+      "ingredients": {
+        "r": 2,
+        "g": 2,
+        "b": 0
+      }
+    },
+    {
+      "name": "Damage Potion III",
+      "ingredients": {
+        "r": 3,
+        "g": 3,
+        "b": 0
+      }
+    },
+    {
+      "name": "Zombie Motivator Potion",
+      "ingredients": {
+        "r": 1,
+        "g": 0,
+        "b": 1
+      }
+    },
+    {
+      "name": "Zombie Motivator Potion II",
+      "ingredients": {
+        "r": 1,
+        "g": 0,
+        "b": 2
+      }
+    },
+    {
+      "name": "Zombie Motivator Potion III",
+      "ingredients": {
+        "r": 3,
+        "g": 0,
+        "b": 3
+      }
+    },
+    {
+      "name": "Berserker Potion",
+      "ingredients": {
+        "r": 1,
+        "g": 1,
+        "b": 1
+      }
+    },
+    {
+      "name": "Berserker Potion II",
+      "ingredients": {
+        "r": 2,
+        "g": 1,
+        "b": 1
+      }
+    },
+    {
+      "name": "Berserker Potion III",
+      "ingredients": {
+        "r": 3,
+        "g": 2,
+        "b": 2
+      }
+    },
+    {
+      "name": "Dream Dust",
+      "ingredients": {
+        "r": 0,
+        "g": 1,
+        "b": 1
+      }
+    },
+    {
+      "name": "Weak growth elixir",
+      "ingredients": {
+        "r": 1,
+        "g": 2,
+        "b": 0
+      }
+    },
+    {
+      "name": "Rich growth elixir",
+      "ingredients": {
+        "r": 1,
+        "g": 3,
+        "b": 0
+      }
+    },
+    {
+      "name": "Miracle growth elixir",
+      "ingredients": {
+        "r": 1,
+        "g": 5,
+        "b": 0
+      }
+    },
+    {
+      "name": "Preservative",
+      "ingredients": {
+        "r": 0,
+        "g": 3,
+        "b": 0
+      }
+    },
+    {
+      "name": "Organ Improver (red)",
+      "ingredients": {
+        "r": 4,
+        "g": 1,
+        "b": 0
+      }
+    },
+    {
+      "name": "Organ Improver (white)",
+      "ingredients": {
+        "r": 0,
+        "g": 4,
+        "b": 0
+      }
+    },
+    {
+      "name": "Reanimation Liquid",
+      "ingredients": {
+        "r": 2,
+        "g": 1,
+        "b": 4
+      }
+    },
+    {
+      "name": "Explosive Dust",
+      "ingredients": {
+        "r": 2,
+        "g": 0,
+        "b": 2
+      }
+    },
+    {
+      "name": "Spices",
+      "ingredients": {
+        "r": 0,
+        "g": 2,
+        "b": 2
+      }
+    },
+    {
+      "name": "Umami",
+      "ingredients": {
+        "r": 0,
+        "g": 4,
+        "b": 4
+      }
+    }
+  ]
+}

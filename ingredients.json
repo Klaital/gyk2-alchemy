@@ -1,0 +1,478 @@
+{
+  "ingredients": [
+    {
+      "name": "Clay",
+      "colors": {
+        "r": 1,
+        "g": 0,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Sand",
+      "colors": {
+        "r": 1,
+        "g": 0,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Red Mushroom",
+      "colors": {
+        "r": 2,
+        "g": 0,
+        "b": 0
+      },
+      "locations": [
+        "Forest"
+      ]
+    },
+    {
+      "name": "Iron Ore",
+      "colors": {
+        "r": 3,
+        "g": 0,
+        "b": 0
+      },
+      "locations": [
+        "Forest",
+        "Swamp"
+      ]
+    },
+    {
+      "name": "Flax",
+      "colors": {
+        "r": 1,
+        "g": 1,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Beeswax",
+      "colors": {
+        "r": 1,
+        "g": 2,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Golden nugget",
+      "colors": {
+        "r": 2,
+        "g": 1,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Firefly",
+      "colors": {
+        "r": 1,
+        "g": 0,
+        "b": 2
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Cheese",
+      "colors": {
+        "r": 1,
+        "g": 1,
+        "b": 1
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Berry",
+      "colors": {
+        "r": 0,
+        "g": 1,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Stick",
+      "colors": {
+        "r": 0,
+        "g": 1,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Flour",
+      "colors": {
+        "r": 0,
+        "g": 2,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Onion",
+      "colors": {
+        "r": 0,
+        "g": 2,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Pumpkin",
+      "colors": {
+        "r": 0,
+        "g": 3,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Peat",
+      "colors": {
+        "r": 0,
+        "g": 1,
+        "b": 1
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Goldfish",
+      "colors": {
+        "r": 0,
+        "g": 2,
+        "b": 1
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Hops",
+      "colors": {
+        "r": 0,
+        "g": 2,
+        "b": 1
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Blueberry",
+      "colors": {
+        "r": 0,
+        "g": 0,
+        "b": 1
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Seed oil",
+      "colors": {
+        "r": 0,
+        "g": 0,
+        "b": 1
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Minced meat",
+      "colors": {
+        "r": 0,
+        "g": 0,
+        "b": 2
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Alcohol",
+      "colors": {
+        "r": 0,
+        "g": 0,
+        "b": 3
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Brain",
+      "colors": {
+        "r": 0,
+        "g": 0,
+        "b": 3
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Zombie goo",
+      "colors": {
+        "r": 0,
+        "g": 0,
+        "b": 2
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Night flower",
+      "colors": {
+        "r": 0,
+        "g": 0,
+        "b": 2
+      },
+      "locations": [
+        "Swamp"
+      ]
+    },
+    {
+      "name": "Blood",
+      "colors": {
+        "r": 0,
+        "g": 0,
+        "b": 1
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Honey",
+      "colors": {
+        "r": 0,
+        "g": 2,
+        "b": 1
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Guts",
+      "colors": {
+        "r": 0,
+        "g": 1,
+        "b": 2
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Blue Crystal",
+      "colors": {
+        "r": 0,
+        "g": 1,
+        "b": 2
+      },
+      "locations": [
+        "Swamp"
+      ]
+    },
+    {
+      "name": "Ash",
+      "colors": {
+        "r": 0,
+        "g": 1,
+        "b": 1
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Fragrance",
+      "colors": {
+        "r": 0,
+        "g": 3,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Swamp mushroom",
+      "colors": {
+        "r": 0,
+        "g": 2,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Water",
+      "colors": {
+        "r": 0,
+        "g": 1,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Leaf",
+      "colors": {
+        "r": 0,
+        "g": 1,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Salt",
+      "colors": {
+        "r": 1,
+        "g": 1,
+        "b": 1
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Tin",
+      "colors": {
+        "r": 2,
+        "g": 0,
+        "b": 1
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Heart",
+      "colors": {
+        "r": 1,
+        "g": 0,
+        "b": 2
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Copper Nugget",
+      "colors": {
+        "r": 2,
+        "g": 1,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Coal",
+      "colors": {
+        "r": 1,
+        "g": 2,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Tooth",
+      "colors": {
+        "r": 1,
+        "g": 1,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Melted Fat",
+      "colors": {
+        "r": 3,
+        "g": 0,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Marble",
+      "colors": {
+        "r": 3,
+        "g": 0,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Flesh",
+      "colors": {
+        "r": 1,
+        "g": 0,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    },
+    {
+      "name": "Stone",
+      "colors": {
+        "r": 2,
+        "g": 0,
+        "b": 0
+      },
+      "locations": [
+        ""
+      ]
+    }
+  ]
+}
