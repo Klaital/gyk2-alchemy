@@ -21,10 +21,11 @@ export function useAlchemyData(): AlchemyData {
   })
 
   useEffect(() => {
+    const base = import.meta.env.BASE_URL
     Promise.all([
-      fetch('/data/ingredients.json').then(r => r.json() as Promise<IngredientsFile>),
-      fetch('/data/recipes.json').then(r => r.json() as Promise<RecipesFile>),
-      fetch('/data/pairs.json').then(r => r.json() as Promise<PairsFile>),
+      fetch(`${base}data/ingredients.json`).then(r => r.json() as Promise<IngredientsFile>),
+      fetch(`${base}data/recipes.json`).then(r => r.json() as Promise<RecipesFile>),
+      fetch(`${base}data/pairs.json`).then(r => r.json() as Promise<PairsFile>),
     ])
       .then(([ing, rec, pairs]) => {
         setState({
