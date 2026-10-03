@@ -19,6 +19,13 @@ body {
   gap: 1.5rem;
 }
 
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #c0b0e0;
+  margin: 0;
+}
+
 /* Top two-column layout */
 .top-panel {
   display: grid;

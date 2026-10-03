@@ -50,6 +50,7 @@ function App() {
 
   return (
     <div className="app">
+      <h1 className="site-title">Graveyard Keeper 2 Alchemy Solver</h1>
       <div className="top-panel">
         <section className="panel">
           <h2>Recipes</h2>
