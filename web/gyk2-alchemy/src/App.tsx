@@ -15,10 +15,13 @@ function isAccessible(solution: Solution, excluded: Set<string>): boolean {
   )
 }
 
+const CORPSE_INGREDIENTS = new Set(['Salt', 'Ash', 'Minced Meat', 'Brain', 'Blood', 'Heart', 'Flesh', 'Tooth'])
+
 function App() {
   const { ingredients, recipes, pairs, triples, loading, error } = useAlchemyData()
   const [selected, setSelected] = useState<Recipe | null>(null)
   const [excludedLocations, setExcludedLocations] = useState<Set<string>>(new Set())
+  const [excludedIngredients, setExcludedIngredients] = useState<Set<string>>(new Set())
 
   const allLocations = useMemo(() => {
     const locs = new Set<string>()
@@ -32,18 +35,40 @@ function App() {
     setSelected(prev => (prev?.name === recipe.name ? null : recipe))
   }
 
-  const matchingPairs = selected
-    ? pairs.filter(s =>
-        colorsEqual(sumColors(s.Ingredients), selected.ingredients) &&
-        isAccessible(s, excludedLocations)
-      )
-    : []
-  const matchingTriples = selected
-    ? triples.filter(s =>
-        colorsEqual(sumColors(s.Ingredients), selected.ingredients) &&
-        isAccessible(s, excludedLocations)
-      )
-    : []
+  const allCorpseExcluded = Array.from(CORPSE_INGREDIENTS).every(n => excludedIngredients.has(n))
+
+  function toggleCorpseIngredients() {
+    setExcludedIngredients(prev => {
+      const next = new Set(prev)
+      if (allCorpseExcluded) {
+        CORPSE_INGREDIENTS.forEach(n => next.delete(n))
+      } else {
+        CORPSE_INGREDIENTS.forEach(n => next.add(n))
+      }
+      return next
+    })
+  }
+
+  function handleIngredientClick(ingredient: { name: string }) {
+    setExcludedIngredients(prev => {
+      const next = new Set(prev)
+      if (next.has(ingredient.name)) next.delete(ingredient.name)
+      else next.add(ingredient.name)
+      return next
+    })
+  }
+
+  function solutionMatches(s: Solution): boolean {
+    if (!selected) return false
+    if (!colorsEqual(sumColors(s.Ingredients), selected.ingredients)) return false
+    if (!isAccessible(s, excludedLocations)) return false
+    if (s.Ingredients.some(ing => excludedIngredients.has(ing.name)))
+      return false
+    return true
+  }
+
+  const matchingPairs   = selected ? pairs.filter(solutionMatches)   : []
+  const matchingTriples = selected ? triples.filter(solutionMatches) : []
 
   if (loading) return <div className="status">Loading…</div>
   if (error)   return <div className="status error">Error: {error}</div>
@@ -67,10 +92,23 @@ function App() {
         </section>
 
         <section className="panel">
-          <h2>Ingredients</h2>
+          <div className="panel-header">
+            <h2>Ingredients</h2>
+            <button
+              className={`shortcut-btn${allCorpseExcluded ? ' active' : ''}`}
+              onClick={toggleCorpseIngredients}
+            >
+              Exclude corpse
+            </button>
+          </div>
           <ul className="item-list">
             {ingredients.map(i => (
-              <IngredientRow key={i.name} ingredient={i} />
+              <IngredientRow
+                key={i.name}
+                ingredient={i}
+                selected={excludedIngredients.has(i.name)}
+                onClick={handleIngredientClick}
+              />
             ))}
           </ul>
         </section>
@@ -84,7 +122,14 @@ function App() {
 
       {selected && (
         <section className="solutions-panel">
-          <h2>Solutions for <em>{selected.name}</em></h2>
+          <div className="recipe-detail">
+            <h2>{selected.name}</h2>
+            <div className="color-requirements">
+              <span className="color-req red">R: {selected.ingredients.r}</span>
+              <span className="color-req green">G: {selected.ingredients.g}</span>
+              <span className="color-req blue">B: {selected.ingredients.b}</span>
+            </div>
+          </div>
 
           {matchingPairs.length === 0 && matchingTriples.length === 0 && (
             <p className="no-solutions">No solutions found.</p>
