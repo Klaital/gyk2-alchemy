@@ -199,6 +199,22 @@
         "g": 4,
         "b": 4
       }
+    },
+    {
+      "name": "Alkali",
+      "ingredients": {
+        "r": 1,
+        "g": 4,
+        "b": 2
+      }
+    },
+    {
+      "name": "Tannin Liquid",
+      "ingredients": {
+        "r": 4,
+        "g": 2,
+        "b": 1
+      }
     }
   ]
 }
