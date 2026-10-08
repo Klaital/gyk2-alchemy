@@ -15,7 +15,7 @@ function isAccessible(solution: Solution, excluded: Set<string>): boolean {
   )
 }
 
-const CORPSE_INGREDIENTS = new Set(['Salt', 'Ash', 'Minced Meat', 'Brain', 'Blood', 'Heart', 'Flesh', 'Tooth'])
+const CORPSE_INGREDIENTS = new Set(['Salt', 'Ash', 'Minced meat', 'Brain', 'Blood', 'Heart', 'Flesh', 'Tooth'])
 
 function App() {
   const { ingredients, recipes, pairs, triples, loading, error } = useAlchemyData()
