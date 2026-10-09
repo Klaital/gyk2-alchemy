@@ -22,6 +22,7 @@ function App() {
   const [selected, setSelected] = useState<Recipe | null>(null)
   const [excludedLocations, setExcludedLocations] = useState<Set<string>>(new Set())
   const [excludedIngredients, setExcludedIngredients] = useState<Set<string>>(new Set())
+  const [preferredIngredient, setPreferredIngredient] = useState<string | null>(null)
 
   const allLocations = useMemo(() => {
     const locs = new Set<string>()
@@ -57,6 +58,11 @@ function App() {
       return next
     })
   }
+
+  function handleIngredientRightClick(ingredient: { name: string }) {
+    setPreferredIngredient(prev => (prev === ingredient.name ? null : ingredient.name))
+  }
+
 
   function solutionMatches(s: Solution): boolean {
     if (!selected) return false
@@ -107,7 +113,9 @@ function App() {
                 key={i.name}
                 ingredient={i}
                 selected={excludedIngredients.has(i.name)}
+                preferred={preferredIngredient === i.name}
                 onClick={handleIngredientClick}
+                onRightClick={handleIngredientRightClick}
               />
             ))}
           </ul>
@@ -139,7 +147,7 @@ function App() {
             <>
               <h3>Pairs ({matchingPairs.length})</h3>
               <div className="solution-grid">
-                {matchingPairs.map((s, i) => <SolutionCard key={i} solution={s} />)}
+                {matchingPairs.map((s, i) => <SolutionCard key={i} solution={s} preferredIngredient={preferredIngredient} />)}
               </div>
             </>
           )}
@@ -148,7 +156,7 @@ function App() {
             <>
               <h3>Triples ({matchingTriples.length})</h3>
               <div className="solution-grid">
-                {matchingTriples.map((s, i) => <SolutionCard key={i} solution={s} />)}
+                {matchingTriples.map((s, i) => <SolutionCard key={i} solution={s} preferredIngredient={preferredIngredient} />)}
               </div>
             </>
           )}

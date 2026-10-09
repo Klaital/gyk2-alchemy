@@ -110,6 +110,11 @@ body {
   background: #533483;
 }
 
+.ingredient-row.preferred {
+  background: #3d2e00;
+  box-shadow: inset 3px 0 0 #c8a000;
+}
+
 .ingredient-name {
   flex: 1;
   font-size: 0.9rem;
@@ -147,6 +152,7 @@ body {
 .recipe-row.selected {
   background: #533483;
 }
+
 
 .recipe-name {
   flex: 1;
@@ -221,6 +227,16 @@ body {
   border-radius: 6px;
   padding: 0.4rem 0.6rem;
   font-size: 0.85rem;
+}
+
+.solution-card.highlighted {
+  background: #1e1800;
+  box-shadow: 0 0 0 1px #c8a000;
+}
+
+.preferred-ingredient {
+  color: #f0c000;
+  font-weight: 600;
 }
 
 .solution-ingredient {
