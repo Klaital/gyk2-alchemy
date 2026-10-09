@@ -76,6 +76,17 @@ function App() {
   const matchingPairs   = selected ? pairs.filter(solutionMatches)   : []
   const matchingTriples = selected ? triples.filter(solutionMatches) : []
 
+  const solutionCounts = useMemo(() => {
+    if (!selected) return null
+    const counts = new Map<string, number>()
+    for (const sol of [...matchingPairs, ...matchingTriples]) {
+      for (const ing of sol.Ingredients) {
+        counts.set(ing.name, (counts.get(ing.name) ?? 0) + 1)
+      }
+    }
+    return counts
+  }, [selected, matchingPairs, matchingTriples])
+
   if (loading) return <div className="status">Loading…</div>
   if (error)   return <div className="status error">Error: {error}</div>
 
@@ -114,6 +125,7 @@ function App() {
                 ingredient={i}
                 selected={excludedIngredients.has(i.name)}
                 preferred={preferredIngredient === i.name}
+                solutionCount={solutionCounts ? (solutionCounts.get(i.name) ?? 0) : null}
                 onClick={handleIngredientClick}
                 onRightClick={handleIngredientRightClick}
               />

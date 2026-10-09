@@ -4,17 +4,19 @@ interface Props {
   ingredient: Ingredient
   selected: boolean
   preferred: boolean
+  solutionCount: number | null
   onClick: (ingredient: Ingredient) => void
   onRightClick: (ingredient: Ingredient) => void
 }
 
-export function IngredientRow({ ingredient, selected, preferred, onClick, onRightClick }: Props) {
+export function IngredientRow({ ingredient, selected, preferred, solutionCount, onClick, onRightClick }: Props) {
   function handleContextMenu(e: React.MouseEvent) {
     e.preventDefault()
     onRightClick(ingredient)
   }
 
-  const cls = ['ingredient-row', selected ? 'selected' : '', preferred ? 'preferred' : ''].filter(Boolean).join(' ')
+  const zero = solutionCount === 0
+  const cls = ['ingredient-row', selected ? 'selected' : '', preferred ? 'preferred' : '', zero ? 'zero-solutions' : ''].filter(Boolean).join(' ')
 
   return (
     <li
@@ -23,6 +25,9 @@ export function IngredientRow({ ingredient, selected, preferred, onClick, onRigh
       onContextMenu={handleContextMenu}
     >
       <span className="ingredient-name">{ingredient.name}</span>
+      {solutionCount !== null && (
+        <span className="solution-count-badge">{solutionCount}</span>
+      )}
       {ingredient.locations.length > 0 && (
         <span className="location-tags">
           {ingredient.locations.map(loc => (

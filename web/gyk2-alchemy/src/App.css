@@ -115,6 +115,22 @@ body {
   box-shadow: inset 3px 0 0 #c8a000;
 }
 
+.ingredient-row.zero-solutions {
+  opacity: 0.35;
+}
+
+.solution-count-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  min-width: 1.4em;
+  text-align: center;
+  background: #0f3460;
+  color: #7090d0;
+  padding: 0.1rem 0.35rem;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
 .ingredient-name {
   flex: 1;
   font-size: 0.9rem;
